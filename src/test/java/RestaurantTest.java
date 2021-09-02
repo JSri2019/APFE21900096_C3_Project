@@ -72,11 +72,11 @@ class RestaurantTest {
     @Test
     public void order_value_for_selected_items_should_be_sum_of_prices_of_those_items(){
         restaurant.addToMenu("Sizzling brownie",319);
-        List<String> selectedItems = new ArrayList<>();
-        selectedItems.add("Sweet corn soup");
-        selectedItems.add("Sizzling brownie");
+        List<String> selectedItemNames = new ArrayList<>();
+        selectedItemNames.add("Sweet corn soup");
+        selectedItemNames.add("Sizzling brownie");
 
-        int orderValue = restaurant.getOrderValue(selectedItems);
+        int orderValue = restaurant.getOrderValue(selectedItemNames);
 
         assertEquals(438,orderValue);
     }
